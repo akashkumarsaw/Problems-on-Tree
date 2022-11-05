@@ -150,15 +150,10 @@
 
 
 ### Binary Tree | Set 1 (Introduction)
-<b>Trees:</b> Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, 
-trees are hierarchical data structures.
-<b>Tree Vocabulary:</b> The topmost node is called root of the tree. The elements that are 
-directly under an element are called its children. The element directly above something 
-is called its parent. For example, a is a child of f and f is the parent of a. Finally, 
-elements with no children are called leaves.
+<b>Trees:</b> Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, trees are hierarchical data structures.
+<b>Tree Vocabulary:</b> The topmost node is called root of the tree. The elements that are directly under an element are called its children. The element directly above something is called its parent. For example, a is a child of f and f is the parent of a. Finally, elements with no children are called leaves.
 <b>Why Trees?</b>
-1. One reason to use trees might be because you want to store information that naturally forms a hierarchy. For example, the file system on a computer:
- file system
+1. One reason to use trees might be because you want to store information that naturally forms a hierarchy. For example, the file system on a computer:file system
 <img src="https://user-images.githubusercontent.com/50274053/200117382-be0995ac-c7cd-40e5-953e-7c4c72771bed.jpg" width="200" />
 2. Trees (with some ordering e.g., BST) provide moderate access/search (quicker than Linked List and slower than arrays).</br>
 3. Trees provide moderate insertion/deletion (quicker than Arrays and slower than Unordered Linked Lists).</br>
@@ -173,9 +168,9 @@ elements with no children are called leaves.
 <b>Binary Tree:</b> A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
 <b>Binary Tree Representation in C:</b> A tree is represented by a pointer to the topmost node in tree. If the tree is empty, then value of root is NULL.
 A Tree node contains following parts.
-    -- Data
-    -- Pointer to left child
-    --Pointer to right child
+- Data
+- Pointer to left child
+- Pointer to right child
     
     
 
