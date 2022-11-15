@@ -150,27 +150,65 @@
 
 
 ### Binary Tree | Set 1 (Introduction)
-<b>Trees:</b> Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, trees are hierarchical data structures.
-<b>Tree Vocabulary:</b> The topmost node is called root of the tree. The elements that are directly under an element are called its children. The element directly above something is called its parent. For example, a is a child of f and f is the parent of a. Finally, elements with no children are called leaves.
-<b>Why Trees?</b>
-1. One reason to use trees might be because you want to store information that naturally forms a hierarchy. For example, the file system on a computer:file system
-<img src="https://user-images.githubusercontent.com/50274053/200117382-be0995ac-c7cd-40e5-953e-7c4c72771bed.jpg" width="200" />
-2. Trees (with some ordering e.g., BST) provide moderate access/search (quicker than Linked List and slower than arrays).</br>
-3. Trees provide moderate insertion/deletion (quicker than Arrays and slower than Unordered Linked Lists).</br>
-4. Like Linked Lists and unlike Arrays, Trees don’t have an upper limit on number of nodes as nodes are linked using pointers.</br>
-    Main applications of trees include:
-    -	Manipulate hierarchical data.
-    -	Make information easy to search (see tree traversal).
-    -	Manipulate sorted lists of data.
-    -	As a workflow for compositing digital images for visual effects.
-    -	Router algorithms
-    -	Form of a multi-stage decision-making (see business chess).
-<b>Binary Tree:</b> A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
-<b>Binary Tree Representation in C:</b> A tree is represented by a pointer to the topmost node in tree. If the tree is empty, then value of root is NULL.
-A Tree node contains following parts.
-- Data
-- Pointer to left child
-- Pointer to right child
+__Trees:__ Unlike Arrays, Linked Lists, Stack and queues, which are linear data structures, trees are hierarchical data structures.
+
+__Tree Vocabulary:__ The topmost node is called root of the tree. The elements that are directly under an element are called its children. The element directly above something is called its parent. For example, a is a child of f and f is the parent of a. Finally, elements with no children are called leaves.
+
+__Why Trees?__
+1. One reason to use trees might be because you want to store information that naturally forms a hierarchy. For example, the file system on a computer: file system 
+
+![image](https://user-images.githubusercontent.com/50274053/201991544-2215fe9e-d86c-4096-840a-f14dc575f415.png) 
+
+2. Trees (with some ordering e.g., BST) provide moderate access/search (quicker than Linked List and slower than arrays)
+3. Trees provide moderate insertion/deletion (quicker than Arrays and slower than Unordered Linked Lists)
+4. Like Linked Lists and unlike Arrays, Trees don’t have an upper limit on number of nodes as nodes are linked using pointers
+    > Main applications of trees include:
+    > *	Manipulate hierarchical data.
+    > *	Make information easy to search (see tree traversal).
+    > *	Manipulate sorted lists of data.
+    > *	As a workflow for compositing digital images for visual effects.
+    > *	Router algorithms
+    > *	Form of a multi-stage decision-making (see business chess).
+   
+__Binary Tree:__ A tree whose elements have at most 2 children is called a binary tree. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
+
+__Binary Tree Representation in C:__ A tree is represented by a pointer to the topmost node in tree. If the tree is empty, then value of root is NULL.
+
+__A Tree node contains following parts.__
+-   Data
+-   Pointer to left child
+-   Pointer to right child
+
+__Summary:__ Tree is a hierarchical data structure. Main uses of trees include maintaining hierarchical data, providing moderate access and insert/delete operations. Binary trees are special cases of tree where every node has at most two children.
+
+### Binary Tree | Set 2 (Properties)
+__1) The maximum number of nodes at level ‘l’ of a binary tree is 2l-1.__
+```javascript
+Here level is number of nodes on path from root to the node (including root and node). 
+Level of root is 1.
+This can be proved by induction.
+For root, l = 1, number of nodes = 21-1 = 1
+Assume that maximum number of nodes on level l is 2l-1
+Since in Binary tree every node has at most 2 children, next level would have twice 
+nodes, i.e. 2 * 2l-1
+```
+__2) Maximum number of nodes in a binary tree of height ‘h’ is 2h – 1.__
+```javascript
+Here height of a tree is maximum number of nodes on root to leaf path. Height of a leaf 
+node is considered as 1.
+This result can be derived from point 2 above. A tree has maximum nodes if all levels 
+have maximum nodes. So maximum number of nodes in a binary tree of height h is 1 + 
+2 + 4 + .. + 2h-1. This is a simple geometric series with h terms and sum of this series is 
+2h – 1.
+In some books, height of a leaf is considered as 0. In this convention, the above formula 
+becomes 2h+1 – 1
+```
+__3) In a Binary Tree with N nodes, minimum possible height or minimum number of levels is ⌈ Log2(N+1) ⌉__
+```javascript
+This can be directly derived from point 2 above. If we consider the convention where 
+height of a leaf node is considered as 0, then above formula for minimum possible 
+height becomes ⌈ Log2(N+1) ⌉ – 1
+```
     
     
 
